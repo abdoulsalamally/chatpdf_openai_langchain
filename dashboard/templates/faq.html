@@ -1,0 +1,46 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Projects{% endblock %}
+
+{% block content %}
+<!-- FAQ Page -->
+<div class="chatPdf_fn_faq_page">
+
+    <!-- Page Title -->
+    <div class="chatPdf_fn_pagetitle">
+        <h2 class="title">Frequently Asked Questions</h2>
+    </div>
+    <!-- !Page Title -->
+
+    <div class="faq">
+        <div class="container small">
+
+            <!-- Accordion Shortcode -->
+            <div class="chatPdf_fn_accordion" data-type="accordion"> <!-- data-type values: accordion, toggle -->
+
+                <!-- #1 accordion item -->
+                <div class="acc__item">
+                    <div class="acc__header">
+                        <h2 class="acc__title">Is there a limit?</h2>
+                        <div class="acc__icon"></div>
+                    </div>
+                    <div class="acc__content">
+                        <p>There is no limit as long as you have the tokens.</p>
+
+                    </div>
+                </div>
+                <!-- !#1 accordion item -->
+
+
+            </div>
+            <!-- !Accordion Shortcode -->
+
+        </div>
+    </div>
+
+
+</div>
+<!-- !FAQ Page -->
+{% endblock %}

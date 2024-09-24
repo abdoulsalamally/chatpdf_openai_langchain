@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}billing{% endblock %}
+{% block css %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+{% endblock %}
+{% block content %}
+    <!-- Pricing Page -->
+    <div class="chatPdf_fn_pricing_page">
+
+        <div class="chatPdf_fn_title_holder">
+            <div class="container">
+                <h1 class="title">Pricing for tokens</h1>
+                <p class="desc fn__animated_text">Buy token and use all products on the site, each action uses
+                    tokens</p>
+            </div>
+        </div>
+
+        <!-- Pricing Shortcode -->
+        <div class="chatPdf_fn_pricing">
+            <div class="container">
+
+                <!-- toggle pricing -->
+                <div class="pricing__toggle">
+                    <div class="toggle_in">
+                        <a href="#tab1" class="active">Tokens</a>
+
+                        <span class="bg"></span>
+                    </div>
+                </div>
+                <!-- !toggle pricing -->
+
+                <!-- pricing tabs -->
+                <div class="pricing__tabs">
+                    <div class="pricing__tab active" id="tab1">
+
+
+                        <!-- /Mobile Pricing Table (shortcode) -->
+
+                        <div class="pricing__content">
+
+                            <!-- table's header -->
+                            <div class="pricing__header">
+                                <div class="item_row">
+                                    <div class="item_col"></div>
+                                    <div class="item_col">
+                                        <div class="popular"><span>Most Popular</span></div>
+                                        <h2 class="title">King tokens</h2>
+                                        <h3 class="price"><span>UGX 2000</span> for 1000 tokens</h3>
+
+                                        <p class="purchase">
+                                            <a href="#" class="chatPdf_fn_button" data-bs-toggle="modal"
+                                               data-bs-target="#exampleModal"
+                                               data-bs-whatever="@mdo"><span>Buy Tokens</span></a>
+                                        </p>
+
+                                        <div class="modal fade" id="exampleModal" tabindex="-1"
+                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Payment</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form method="post">
+                                                            {% csrf_token %}
+                                                            <div class="mb-3">
+                                                                <label for="number" class="col-form-label">Phone
+                                                                    Number:</label>
+                                                                <input type="number" class="form-control"
+                                                                       id="number" name = "number">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="email"
+                                                                       class="form-label">Email address</label>
+                                                                <input type="email" class="form-control"
+                                                                       id="email"
+                                                                       placeholder="name@example.com"
+                                                                name="email">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="amount" class="col-form-label">
+                                                                    Amount:</label>
+                                                                <input type="number" class="form-control"
+                                                                       id="amount"
+                                                                name="amount">
+                                                            </div>
+                                                                <div class="mb-3">
+
+                                                                    <button type="submit" class="btn btn-primary form-control">Buy tokens
+                                                                </button>
+                                                                </div>
+
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close
+                                                        </button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item_col"></div>
+
+                                </div>
+                            </div>
+                            <!-- !table's header -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- !pricing tabs -->
+
+
+            </div>
+        </div>
+        <!-- !Pricing Shortcode -->
+
+
+        <div class="chatPdf_fn_title_holder">
+            <div class="container">
+                <h1 class="title">Frequently Asked Questions</h1>
+                <p class="desc fn__animated_text">Many support queries and technical questions will already be
+                    answered</p>
+            </div>
+        </div>
+
+        <div class="container medium">
+
+            <!-- Accordion Shortcode -->
+            <div class="chatPdf_fn_accordion" data-type="accordion"> <!-- data-type values: accordion, toggle -->
+
+                <!-- #1 accordion item -->
+                <div class="acc__item">
+                    <div class="acc__header">
+                        <h2 class="acc__title">How does it work?</h2>
+                        <div class="acc__icon"></div>
+                    </div>
+                    <div class="acc__content">
+                        <p>Click the buy tokens and fill in the forms and pay via mobile money</p>
+
+                    </div>
+                </div>
+                <!-- !#1 accordion item -->
+
+                <!-- #2 accordion item -->
+
+
+                <!-- #6 accordion item -->
+                <div class="acc__item">
+                    <div class="acc__header">
+                        <h2 class="acc__title">Do the token expire?</h2>
+                        <div class="acc__icon"></div>
+                    </div>
+                    <div class="acc__content">
+                        <p>No</p>
+
+                    </div>
+                </div>
+                <!-- !#6 accordion item -->
+
+            </div>
+            <!-- !Accordion Shortcode -->
+
+        </div>
+
+    </div>
+    <!-- !Notification Single Page -->
+{% endblock %}
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="@mdo">Open modal for @mdo
+</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="@fat">Open modal for @fat
+</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="@getbootstrap">Open modal for @getbootstrap
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Recipient:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+        </div>
+    </div>
+</div>

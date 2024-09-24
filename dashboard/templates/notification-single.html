@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Notifications-details{% endblock %}
+
+{% block content %}
+    <!-- Notification Single Page -->
+    <div class="chatPdf_fn_notification_single_page">
+
+        <!-- Page Title -->
+        <div class="chatPdf_fn_pagetitle">
+            <h2 class="title"><span>Notification:</span></h2>
+        </div>
+        <!-- !Page Title -->
+
+        <div class="chatPdf_fn_notification_single_content">
+            <div class="container small">
+                <h1>{{ notification.message }}</h1>
+                <p>{{ notification.details }}</p>
+
+                <div class="fn__backto">
+                    <a href="{% url 'dashboard:notifications' %}">
+                        <img src="svg/arrow.svg" alt="" class="fn__svg">
+                        <span class="text">Back to Notifications</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- !Notification Single Page -->
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Notifications{% endblock %}
+
+{% block content %}
+    <!-- User Profile Page -->
+    <div class="chatPdf_fn_user_profile_page">
+        <!-- Page Title -->
+        <div class="chatPdf_fn_pagetitle">
+            <h2 class="title">User Profile</h2>
+        </div>
+        <!-- !Page Title -->
+
+        <div class="container small">
+            <div class="chatPdf_fn_user_profile">
+
+                <div class="user__profile">
+                    <div class="user_avatar">
+                        <img src="{% static 'img/user/user.jpg' %}" alt="">
+                    </div>
+                    <div class="user_details">
+                        <ul>
+                            <li>
+                                <div class="item">
+                                    <h4 class="subtitle">Name</h4>
+                                    <h3 class="title">{{ request.user.first_name }} {{ request.user.last_name }}</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <h4 class="subtitle">Username</h4>
+                                    <h3 class="title">@{{ request.user.username }}</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <h4 class="subtitle">Email Address</h4>
+                                    <h3 class="title">{{ request.user.email }}</h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="{% url 'dashboard:setttings' %}" class="user_edit fn__icon_button">
+                        <img src="{% static 'svg/setting.svg' %}" alt="" class="fn__svg">
+                    </a>
+                </div>
+
+                <div class="user__plan">
+                    <div class="plan_left">
+                        <h4 class="subtitle">Your Tokens</h4>
+                        <p class="info"> You have {{ tokens }} tokens</p>
+                    </div>
+                    <div class="plan_right">
+                        <a href="{% url 'dashboard:billing' %}" class="token_upgrade chatPdf_fn_button"><span>Buy Tokens</span></a>
+                    </div>
+                </div>
+
+{#                <div class="user__interests">#}
+{#                    <h4 class="title">What are your interests?</h4>#}
+{#                    <div class="fn__options_list">#}
+{#                        <ul>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border enabled">#}
+{#                                    <span>Advertising</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border disabled">#}
+{#                                    <span>Architecture</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border disabled">#}
+{#                                    <span>Art</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border disabled">#}
+{#                                    <span>Education</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border disabled">#}
+{#                                    <span>Fashion</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border disabled">#}
+{#                                    <span>Film TV</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border disabled">#}
+{#                                    <span>Interior</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border enabled">#}
+{#                                    <span>Marketing</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border disabled">#}
+{#                                    <span>Graphics</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border disabled">#}
+{#                                    <span>Games</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border disabled">#}
+{#                                    <span>Stock Images</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#" class="chatPdf_fn_button small__border disabled">#}
+{#                                    <span>Other</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
+
+            </div>
+        </div>
+
+    </div>
+    <!-- !User Profile Page -->
+{% endblock %}

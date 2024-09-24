@@ -1,0 +1,40 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Notifications{% endblock %}
+
+{% block content %}
+    <!-- Notifications Page -->
+    <div class="chatPdf_fn_notifications_page">
+
+        <!-- Page Title -->
+        <div class="chatPdf_fn_pagetitle">
+            <h2 class="title">Notifications</h2>
+        </div>
+        <!-- !Page Title -->
+
+        <div class="chatPdf_fn_notifications_content">
+            <div class="container small">
+
+
+                <!-- Notifications List -->
+                <div class="chatPdf_fn_notifications_list">
+                    {% for notif in notifications %}
+                    <div class="notification__item">
+                        <a href="{% url 'dashboard:notfication_details' notif.id %}" class="fn__full_link"></a>
+                        <h2 class="item__title">{{ notif.message }}</h2>
+                        <span class="item__date">{{ notif.timestamp }}</span>
+                    </div>
+                    {% endfor %}
+
+                </div>
+                <!-- !Notifications List -->
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- !Notifications Page -->
+{% endblock %}

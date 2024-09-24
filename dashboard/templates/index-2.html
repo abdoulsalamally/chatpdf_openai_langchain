@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}My Page{% endblock %}
+
+{% block content %}
+    <!-- Home Page -->
+    <div class="chatPdf_fn_home">
+        <div class="section_home">
+            <div class="section_left">
+
+                <!-- Title Shortcode -->
+                <div class="chatPdf_fn_title_holder">
+                    <h1 class="title">Unlock Your Imagination with ChatPDF</h1>
+                    <p class="desc">Generate your ideas from pdf content</p>
+                </div>
+                <!-- !Title Shortcode -->
+
+                <!-- Interactive List Shortcode -->
+                <div class="chatPdf_fn_interactive_list modern">
+                    <ul>
+                        <li>
+                            <div class="item">
+                                <a href="{% url 'dashboard:chat' %}">
+												<span class="icon">
+													<img src="{% static 'svg/chat.svg' %}" alt="" class="fn__svg">
+												</span>
+                                    <h2 class="title">AI Chat Pdf</h2>
+                                    <p class="desc"></p>
+                                    <span class="arrow"><img src="{% static 'svg/arrow.svg' %}" alt="" class="fn__svg"></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- !Interactive List Shortcode -->
+
+            </div>
+            <div class="section_right">
+                <div class="company_info">
+{#                    <img src="{% static 'img/logo-desktop-full.png' %}" alt="">#}
+                    <p class="fn__animated_text">"ChatPDF is your gateway to smarter document analysis. It's designed to empower users with advanced AI features, putting you in control of understanding your PDFs better."</p>
+                    <hr>
+                    <div class="fn__members">
+
+                        <div class="active item">
+                            <span class="circle"></span>
+                            <span class="text">{{ user_count }} Members</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !Home Page -->
+{% endblock %}

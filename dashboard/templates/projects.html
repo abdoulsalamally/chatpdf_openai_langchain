@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Projects{% endblock %}
+
+{% block content %}
+    <!-- Projects Page -->
+    <div class="chatPdf_fn_models_page">
+
+        <div class="fn__title_holder">
+            <div class="container">
+                <h1 class="title">Projects</h1>
+            </div>
+        </div>
+
+        <!-- Models -->
+        <div class="chatPdf_fn_models">
+
+            <div class="fn__tabs">
+                <div class="container">
+                    <div class="tab_in">
+                        <a class="active" href="#tab1">Projects</a>
+                        <a href="#tab3">Bookmarks</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- models filter -->
+            <div class="container">
+                <div class="models__filter">
+                    <div class="filter__left">
+                        <div class="filter__search">
+                            <input type="text" placeholder="Search gallery">
+                            <a href="#" class="chatPdf_fn_button"><span>Search</span></a>
+                        </div>
+                    </div>
+                    <div class="filter__right">
+                        <div class="filter__category">
+                            <select>
+                                <option value="all" selected>All Categories</option>
+                                <option value="Buildings">Buildings</option>
+                                <option value="Characters">Characters</option>
+                                <option value="Environments">Environments</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Illustration">Illustration</option>
+                                <option value="Graphical">Graphical</option>
+                                <option value="Photography">Photography</option>
+                                <option value="Textures">Textures</option>
+                            </select>
+                        </div>
+                        <div class="filter__order">
+                            <div class="fn__icon_options medium_size align_right">
+											<span class="fn__icon_button">
+												<img src="{% static 'svg/filter.svg' %}" alt="" class="fn__svg">
+											</span>
+                                <div class="fn__icon_popup">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Newest</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Oldest</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">A-Z</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- !models filter -->
+
+
+            <div class="container">
+                <!-- models content -->
+                <div class="models__content">
+                    <div class="models__results">
+                        <div class="fn__preloader">
+                            <div class="icon"></div>
+                            <div class="text">Loading</div>
+                        </div>
+                        <div class="fn__tabs_content">
+                            <div id="tab1" class="tab__item active">
+                                <ul class="fn__model_items">
+
+                                    <!-- #1 model item -->
+                                    <li class="fn__model_item">
+                                        <div class="item">
+                                            <a href="#" class="fn__bookmark has__bookmark">
+                                                <img src="{% static 'svg/bookmark.svg' %}" alt=""
+                                                     class="fn__svg hasntbook">
+                                                <img src="{% static 'svg/bookmarked.svg' %}" alt=""
+                                                     class="fn__svg hasbook">
+                                            </a>
+                                            <div class="img">
+                                                <img src="{% static 'img/models/1.jpg' %}" alt="">
+                                            </div>
+                                            <div class="item__info">
+                                                <h3 class="title">GameVisuals</h3>
+                                                <p class="desc">A versatile model great at both photorealism and anime,
+                                                    includes noise offset training... by Lykon.</p>
+                                            </div>
+                                            <div class="item__author">
+                                                <img src="{% static 'img/user/user.jpg' %}" alt="">
+                                                <h3 class="author_name">Caden</h3>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- !#1 model item -->
+
+                                </ul>
+                            </div>
+
+                            <div id="tab3" class="tab__item">
+                                <ul class="fn__model_items">
+
+                                    <!-- #1 model item -->
+                                    <li class="fn__model_item">
+                                        <div class="item">
+                                            <a href="#" class="fn__bookmark has__bookmark">
+                                                <img src="{% static 'svg/bookmark.svg' %}" alt=""
+                                                     class="fn__svg hasntbook">
+                                                <img src="{% static 'svg/bookmarked.svg' %}" alt=""
+                                                     class="fn__svg hasbook">
+                                            </a>
+                                            <div class="img">
+                                                <img src="{% static 'img/models/1.jpg' %}" alt="">
+                                            </div>
+                                            <div class="item__info">
+                                                <h3 class="title">GameVisuals</h3>
+                                                <p class="desc">A versatile model great at both photorealism and anime,
+                                                    includes noise offset training... by Lykon.</p>
+                                            </div>
+                                            <div class="item__author">
+                                                <img src="{% static 'img/user/user.jpg' %}" alt="">
+                                                <h3 class="author_name">Caden</h3>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- !#1 model item -->
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="models__more">
+                        <a href="#" class="medium chatPdf_fn_button"><span>Load More</span></a>
+                    </div>
+                </div>
+                <!-- !models content -->
+            </div>
+
+
+        </div>
+        <!-- !Models -->
+
+    </div>
+    <!-- !Pojects Page -->
+{% endblock %}
